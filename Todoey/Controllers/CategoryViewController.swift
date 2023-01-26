@@ -22,11 +22,11 @@ class CategoryViewController: SwipeTableViewController {
         loadCategories()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        guard let navBar = navigationController?.navigationBar else { fatalError("Navigation controller does not exist.")
-        }
-        navBar.backgroundColor = UIColor(hexString: "#1D9BF6")
+  override func viewWillAppear(_ animated: Bool) {
+    guard let navBar = navigationController?.navigationBar else { fatalError("Navigation controller does not exist.")
     }
+    navBar.backgroundColor = UIColor(hexString: "#7B8FA1")
+  }
     
     
     
@@ -110,7 +110,7 @@ class CategoryViewController: SwipeTableViewController {
         
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Todoey Category", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Add Category", style: .default) {action in
+        let action = UIAlertAction(title: "Add Category", style: .default) { action in
             let newCategory = Category()
             newCategory.name = textField.text!
             newCategory.color = UIColor.randomFlat().hexValue()
